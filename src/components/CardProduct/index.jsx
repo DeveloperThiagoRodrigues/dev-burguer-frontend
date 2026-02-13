@@ -8,7 +8,10 @@ export function CardProduct({ product }) {
     const { putProductInCart } = useCart()
     return(
         <Container>
-            <CardImage src={product.url} alt={product.name}/>
+           <CardImage 
+  src={`${import.meta.env.VITE_BASE_URL}/product-file/${product.path}`} 
+  alt={product.name} 
+/>
             <div>
                 <p>{product.name}</p>
                 <strong> {product.currencyValue}</strong>
